@@ -68,7 +68,7 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@commitlint/travis-cli": "^8.3.5",
-    "@rollup/plugin-babel": "^5.0.0",
+    "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@semantic-release/changelog": "^5.0.0",

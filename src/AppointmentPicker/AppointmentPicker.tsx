@@ -47,6 +47,7 @@ interface DefaultPropsInterface {
   initialDay: Date;
   unitTime: number;
   local: string;
+  localeTimeOptions: Object;
 }
 
 export type AppointmentAttributesType = {
@@ -67,7 +68,7 @@ interface AppointmentPickerPropsInterface {
   initialDay?: Date;
   unitTime?: number;
   local?: string;
-  localeTimeOptions?: string;
+  localeTimeOptions?: Object;
   visible?: boolean;
   loading?: boolean;
   days: AppointmentAttributesType[][];
@@ -442,7 +443,7 @@ export class AppointmentPicker extends Component<
       maxReservableAppointments,
       unitTime,
       local,
-      options,
+      localeTimeOptions,
       continuous
     } = this.props;
     const blanks = new Array(
@@ -456,7 +457,7 @@ export class AppointmentPicker extends Component<
       }
       const time = new Date(
         actualDay.getTime() + unitTime * key
-      ).toLocaleTimeString(local, options);
+      ).toLocaleTimeString(local, localeTimeOptions);
       const isSelected =
         isDaySelected &&
         this.includeAppointment(
