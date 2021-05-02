@@ -468,6 +468,7 @@ export class AppointmentPicker extends Component<
       const props = {
         isSelected,
         isReserved: appointment.isReserved,
+        isOptioned: appointment.isOptioned,
         isEnabled: size < maxReservableAppointments || continuous,
         selectAppointment: this.selectAppointment.bind(
           this,
